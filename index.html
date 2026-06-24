@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>つくば店 2026年6月 集計検証レポート</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin:0; background:#EAE0DB; font-family:'Yu Gothic','YuGothic','Hiragino Sans','Hiragino Kaku Gothic ProN',sans-serif; color:#2b2224; line-height:1.6; }
+  .page { max-width:880px; margin:0 auto; background:#FDF8F6; padding:40px 36px; }
+  .hd-kicker { font-size:12px; color:#C9898E; letter-spacing:2px; }
+  .hd-title { font-size:23px; font-weight:500; color:#3a2b2d; margin-top:2px; }
+  .hd { border-bottom:2px solid #C9898E; padding-bottom:14px; margin-bottom:26px; }
+  .sec-title { font-size:16px; font-weight:500; color:#3a2b2d; margin:30px 0 4px; }
+  .sec-lead { font-size:13px; color:#5f5048; margin-bottom:12px; }
+  table { width:100%; border-collapse:collapse; font-size:13px; }
+  th { background:#000; color:#fff; border:1px solid #000; padding:9px 10px; font-weight:500; }
+  td { border:1px solid #000; padding:9px 10px; }
+  .r { text-align:right; } .c { text-align:center; }
+  .ok { color:#2e7d4f; font-weight:500; }
+  .card { background:#fff; border:1px solid #000; padding:18px; }
+  .banner { background:#fff; border:1px solid #000; border-left:6px solid #C9898E; padding:14px 18px; }
+  .flow { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:10px; }
+  .box { border:1px solid #000; padding:10px 14px; text-align:center; }
+  .op { font-size:20px; color:#C9898E; font-weight:500; }
+  .arrow { color:#C9898E; font-size:18px; font-weight:500; }
+  .lbl { font-size:11px; }
+  .val { font-size:17px; font-weight:500; }
+  .grid3 { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; }
+  .mini { font-size:12px; line-height:1.6; }
+  .hr { height:1px; background:#e0d4cd; margin:28px 0; }
+  .qa { background:#fff; border:1px solid #000; padding:12px 16px; margin-bottom:10px; }
+  .q { font-size:13px; font-weight:500; color:#993556; }
+  .a { font-size:12px; color:#3a2b2d; margin-top:4px; }
+  .foot { font-size:11px; color:#8a7a72; margin-top:24px; border-top:1px solid #e0d4cd; padding-top:12px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="hd">
+    <div class="hd-kicker">集計検証レポート</div>
+    <div class="hd-title">つくば店 2026年6月 ｜ 現行システム × 改修版 比較</div>
+  </div>
+
+  <div style="font-size:13px; color:#3a2b2d; line-height:1.8; margin-bottom:18px;">つくば店の2026年6月について、現行システムと改修版の集計を1日ごとに突き合わせて検証しました。結果は次のとおりです。</div>
+
+  <div class="banner">
+    <div style="font-size:16px; font-weight:500; color:#3a2b2d;">改修版の集計は、現行システムと数字が一致しています</div>
+    <div style="font-size:13px; color:#5f5048; margin-top:6px;">売上（総額）7,723,244円 が現行と完全に一致。集計は正しく取れています。</div>
+  </div>
+
+  <div style="font-size:12px; color:#5f5048; margin:14px 4px 0;">本レポートはつくば店の例です。他の全店舗も<span style="font-weight:500;">同一システムで自動集計</span>され、同様に現行と整合します。</div>
+
+  <div class="sec-title">1. 売上の比較（総額ベース）</div>
+  <table style="margin-bottom:8px;">
+    <thead>
+      <tr><th style="text-align:left;">項目</th><th class="r">現行</th><th class="r">改修版</th><th class="c">判定</th></tr>
+    </thead>
+    <tbody>
+      <tr style="background:#D9EAD3;"><td style="font-weight:500;">総契約金額（総額）</td><td class="r">7,723,244</td><td class="r">7,723,244</td><td class="c ok">一致</td></tr>
+      <tr style="background:#F4CCCC;"><td>脱毛</td><td class="r">5,137,810</td><td class="r">5,137,810</td><td class="c ok">一致</td></tr>
+      <tr style="background:#FFF2CC;"><td>エステ</td><td class="r">2,049,095</td><td class="r">2,049,095</td><td class="c ok">一致</td></tr>
+      <tr style="background:#CFE2F3;"><td>物販</td><td class="r">536,339</td><td class="r">536,339</td><td class="c ok">一致</td></tr>
+      <tr><td>解約</td><td class="r">-256,071</td><td class="r">-256,071</td><td class="c ok">一致</td></tr>
+      <tr><td>クーリングオフ</td><td class="r">-208,040</td><td class="r">-208,040</td><td class="c ok">一致</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sec-title">2. 「見た目の数字が違う」のはなぜ？ — 総額と純額の違い</div>
+  <div class="card">
+    <div class="flow">
+      <div class="box" style="background:#D9EAD3; min-width:150px;"><div class="lbl" style="color:#3a5a3a;">改修版の表示（総額）</div><div class="val" style="color:#234023;">7,723,244</div></div>
+      <div class="op">−</div>
+      <div class="box" style="min-width:110px;"><div class="lbl" style="color:#7a5a5a;">解約</div><div class="val" style="color:#993333;">256,071</div></div>
+      <div class="op">−</div>
+      <div class="box" style="min-width:110px;"><div class="lbl" style="color:#7a5a5a;">クーリングオフ</div><div class="val" style="color:#993333;">208,040</div></div>
+      <div class="op">＝</div>
+      <div class="box" style="background:#CFE2F3; min-width:150px;"><div class="lbl" style="color:#1c4a6e;">現行の表示（純額）</div><div class="val" style="color:#143a56;">7,261,533</div></div>
+    </div>
+    <div style="font-size:13px; color:#5f5048; margin-top:16px; text-align:center;">同じデータです。改修版は「総額（解約・クーリングオフを引く前）」で表示する方針です（2026年6月19日 社長判断）。<br>解約・クーリングオフは別の欄に分けて表示しているので、二重に引かれることはありません。</div>
+  </div>
+
+  <div class="hr"></div>
+
+  <div class="sec-title">3. 実績内訳（媒体別）が現行と数字が違う理由</div>
+  <div class="sec-lead">データの「取り方」と「分け方」が違うため、セル単位の数字は現行と一致しません。それぞれ意味のある数字です。</div>
+  <div class="grid3" style="margin-bottom:16px;">
+    <div class="card" style="padding:12px;"><div style="font-size:12px; font-weight:500; color:#C9898E; margin-bottom:4px;">違い① 分け方</div><div class="mini" style="color:#3a2b2d;">カテゴリ別（脱毛・痩身・フェイシャル…）に分けて表示。現行は店舗全体でまとめ。</div></div>
+    <div class="card" style="padding:12px;"><div style="font-size:12px; font-weight:500; color:#C9898E; margin-bottom:4px;">違い② 契約数が2種類</div><div class="mini" style="color:#3a2b2d;">「契約者数（問合せ経由）」と「全契約数（飛び込み・紹介も含む）」を分けて表示。</div></div>
+    <div class="card" style="padding:12px;"><div style="font-size:12px; font-weight:500; color:#C9898E; margin-bottom:4px;">違い③ データの出どころ</div><div class="mini" style="color:#3a2b2d;">問合せ→予約→来店→契約は「問合せ表」から、売上と全契約数は「日報」から取得。</div></div>
+  </div>
+  <div class="card">
+    <div style="font-size:12px; color:#5f5048; margin-bottom:10px;">例：脱毛新規（媒体すべての合計）</div>
+    <div class="flow" style="justify-content:flex-start;">
+      <div class="box" style="background:#F4CCCC; min-width:74px;"><div class="lbl" style="color:#7a3a3a;">問合せ</div><div class="val">65</div></div>
+      <span class="arrow">→</span>
+      <div class="box" style="background:#F4CCCC; min-width:74px;"><div class="lbl" style="color:#7a3a3a;">予約</div><div class="val">44</div></div>
+      <span class="arrow">→</span>
+      <div class="box" style="background:#F4CCCC; min-width:74px;"><div class="lbl" style="color:#7a3a3a;">来店</div><div class="val">16</div></div>
+      <span class="arrow">→</span>
+      <div class="box" style="background:#D9EAD3; min-width:100px;"><div class="lbl" style="color:#3a5a3a;">契約者数（問合せ経由）</div><div class="val">12</div></div>
+      <div class="box" style="background:#CFE2F3; min-width:100px; margin-left:6px;"><div class="lbl" style="color:#1c4a6e;">全契約数（日報）</div><div class="val">22</div></div>
+    </div>
+    <div style="font-size:12px; color:#5f5048; margin-top:10px;">「契約者数12」は問合せ（オンライン）から来店して契約した人＝媒体の費用対効果を見る数字。「全契約数22」は飛び込み・紹介も含めた実際の全契約。<span style="color:#993333;">現行の「契約数」と直接は一致しません</span>が、より細かく実態が分かるようになっています。</div>
+  </div>
+
+  <div class="hr"></div>
+
+  <div class="sec-title">4. 個人実績の「青い名前」について</div>
+  <div class="sec-lead">青文字は<span style="color:#1155CC; font-weight:500;">マスタ（社員リスト）に登録されていない担当者</span>です。エラーではなく「要確認」の目印です。</div>
+  <div class="card flow" style="justify-content:flex-start; margin-bottom:10px;">
+    <div class="box" style="border-color:#999;"><span style="color:#1155CC; font-weight:500;">宝家 シエラ</span><div style="font-size:10px; color:#888;">青文字＝未登録</div></div>
+    <span class="arrow" style="font-size:20px;">→</span>
+    <div class="box" style="border-color:#999;"><span style="font-size:12px; color:#3a2b2d;">マスタ②社員リストに登録</span></div>
+    <span class="arrow" style="font-size:20px;">→</span>
+    <div class="box" style="border-color:#999;"><span style="color:#000; font-weight:500;">宝家 シエラ</span><div style="font-size:10px; color:#2e7d4f;">次回集計で自動的に黒へ</div></div>
+  </div>
+  <div class="banner" style="font-size:12px; color:#3a2b2d;">
+    <div style="font-weight:500; margin-bottom:4px;">なぜ青く出すのか</div>
+    登録漏れや名前の表記ゆれ（苗字だけ・フルネーム違いなど）があると、その人の売上が個人集計から抜け落ちてしまいます。それを防ぐため、日報の名前のまま末尾に追加し、青文字で「マスタ未登録＝要確認」と知らせています。
+    <div style="font-weight:500; margin:8px 0 4px;">解消の方法</div>
+    ・マスタ②社員リスト（オンラインスタッフは③）にその人を登録する → 次回集計で自動的に黒文字に戻ります（自動修復）。<br>
+    ・表記ゆれが原因の場合は、日報の名前とマスタの名前を揃える。
+  </div>
+
+  <div class="hr"></div>
+
+  <div class="sec-title">5. FAQ</div>
+  <div class="qa"><div class="q">Q. 現行と契約数が違うのはなぜ？</div><div class="a">A. 「問合せ経由の契約者数」と「全契約数」を分けているためです。実際の総契約に近いのは「全契約数」です。</div></div>
+  <div class="qa"><div class="q">Q. 名前が青い人は問題があるの？</div><div class="a">A. マスタ未登録の合図です。マスタに登録すれば次回から自動で黒に戻ります。売上はきちんと集計されています。</div></div>
+  <div class="qa"><div class="q">Q. 数字はいつ更新される？</div><div class="a">A. 毎日 夜23時と朝6時に自動で集計されます。手動でもいつでも更新できます。</div></div>
+  <div class="qa"><div class="q">Q. 目標が空欄／達成率が出ないのは？</div><div class="a">A. マスタに各店の目標を入力すると、達成率が自動で表示されます。</div></div>
+
+  <div class="hr"></div>
+
+  <div class="sec-title">6. 毎月の運用について（お願い）</div>
+  <div class="sec-lead">翌月分の日報を正しく自動生成するため、必要な情報は<span style="color:#993333; font-weight:500;">毎月26日まで</span>にマスタへご反映をお願いします。</div>
+  <div class="card flow" style="justify-content:center; gap:14px; margin-bottom:10px;">
+    <div class="box" style="background:#FFF2CC; min-width:210px;"><div class="lbl" style="color:#7a5f1a;">毎月 26日まで</div><div style="font-size:14px; font-weight:500; color:#5a4510;">マスタへ反映（締切）</div><div style="font-size:11px; color:#7a5f1a;">社員の入退社・新店舗・月間目標 など</div></div>
+    <span class="arrow" style="font-size:22px;">→</span>
+    <div class="box" style="background:#D9EAD3; min-width:210px;"><div class="lbl" style="color:#3a5a3a;">毎月 28日（夜）</div><div style="font-size:14px; font-weight:500; color:#234023;">翌月分の日報シートを自動生成</div><div style="font-size:11px; color:#3a5a3a;">26日までの内容で作られます</div></div>
+  </div>
+  <div class="banner" style="font-size:12px; color:#3a2b2d;">
+    <div style="font-weight:500; margin-bottom:4px;">マスタにご反映いただきたい主な情報</div>
+    ・社員の入社・退社・担当店舗の変更（②社員リスト ／ オンラインは③オンラインスタッフ）<br>
+    ・新しい店舗の追加（①店舗・組織情報 など）<br>
+    ・各店の月間目標（⑥月間目標）<br>
+    <div style="margin-top:6px;">※翌月分の日報は、<span style="font-weight:500;">生成された時点（28日の夜）でマスタに入っている情報</span>が反映されます。</div>
+    <div style="margin-top:4px;">※26日以降に追加・変更した場合も、マスタに登録すれば、<span style="font-weight:500;">翌日の定時更新（毎日23時・朝6時の自動集計）</span>で実績に反映されます。</div>
+  </div>
+
+  <div class="foot">検証：2026年6月 つくば店日報（現行）と改修版日報の全データを1日ごとに突合。売上・解約・クーリングオフは総額ベースで全項目一致を確認。</div>
+
+</div>
+</body>
+</html>
